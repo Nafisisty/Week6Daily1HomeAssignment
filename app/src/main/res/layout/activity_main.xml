@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:bind="http://schemas.android.com/apk/res-auto">
+
+    <data>
+        <variable
+            name="viewModel"
+            type="com.example.week6daily1homeassignment.viewmodel.UserViewModel" />
+    </data>
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <EditText
+        android:id="@+id/nameEditTextViewId"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:afterTextChanged="@{(editable)->viewModel.afterNameTextChanged(editable)}"
+        android:hint="NAME"/>
+
+
+    <EditText
+        android:id="@+id/favBookEditTextViewId"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:afterTextChanged="@{(editable)->viewModel.afterFavBookTextChanged(editable)}"
+        android:hint="FAVOURITE BOOK"/>
+
+    <EditText
+        android:id="@+id/favMovieEditTextViewId"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:afterTextChanged="@{(editable)->viewModel.afterFavMovieTextChanged(editable)}"
+        android:hint="FAVOURITE MOVIE"/>
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="@{()-> viewModel.onSaveClicked()}"
+        android:text="SAVE"
+        bind:toastMessage="@{viewModel.toastMessage}"/>
+
+</LinearLayout>
+</layout>
