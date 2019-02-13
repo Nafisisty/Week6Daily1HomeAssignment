@@ -5,3 +5,5 @@ Providing information and saving it to display in next activity.
 ![](app/src/main/res/drawable/screenshot_1.png)
 Displaying information.
 ![](app/src/main/res/drawable/screenshot_2.png)
+Unit test passed.
+![](app/src/main/res/drawable/screenshot_3.png)
