@@ -1,5 +1,7 @@
 package com.example.week6daily1homeassignment;
 
+import com.example.week6daily1homeassignment.model.User;
+
 import org.junit.Test;
 
 import static org.junit.Assert.*;
@@ -10,8 +12,15 @@ import static org.junit.Assert.*;
  * @see <a href="http://d.android.com/tools/testing">Testing documentation</a>
  */
 public class ExampleUnitTest {
+
+    User user = new User("Nafis", "Pret", "Lord of the Rings");
+
     @Test
-    public void addition_isCorrect() {
-        assertEquals(4, 2 + 2);
+    public void sameValuePassed() {
+
+        assertEquals("Nafis", user.getName());
+        assertEquals("Pret", user.getFavBook());
+        assertEquals("Lord of the Rings", user.getFavMovie());
+
     }
 }
